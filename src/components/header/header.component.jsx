@@ -17,10 +17,9 @@ const Header = ({ currentUser }) => (
       <Link className="option" to="/shop">
         CONTACT
       </Link>
-      {currentUser ? (
+      { currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
-          {" "}
-          SIGN OUT{" "}
+          SIGN OUT
         </div>
       ) : (
         <Link className="option" to="/signin">
@@ -38,4 +37,4 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps)(Header);
 
-//conneis a higher order function that amps up a component to make it even more functional
+//connect is a higher order function that amps up a component to make it even more functional
